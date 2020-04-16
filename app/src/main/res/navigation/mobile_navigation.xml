@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.sri.eko.Views.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_loans"
+            app:destination="@id/nav_loans"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_investment"
+            app:destination="@id/nav_investment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_saving"
+            app:destination="@id/nav_saving"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_policies"
+            app:destination="@id/nav_policies"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_loans"
+        android:name="com.sri.eko.Views.fragments.LoansFragment"
+        android:label="@string/menu_loans"
+        tools:layout="@layout/fragment_loans">
+        <action
+            android:id="@+id/action_nav_loans_to_uploadKycFragment"
+            app:destination="@id/uploadKycFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_loans_to_termsConditionsFragment"
+            app:destination="@id/termsConditionsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_nav_loans_to_nav_home"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_loans_to_trackLoansFragment"
+            app:destination="@id/trackLoansFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_investment"
+        android:name="com.sri.eko.Views.fragments.InvestmentFragment"
+        android:label="@string/investment"
+        tools:layout="@layout/fragment_investment" />
+
+    <fragment
+        android:id="@+id/nav_saving"
+        android:name="com.sri.eko.Views.fragments.SavingsFragment"
+        android:label="@string/menu_savings"
+        tools:layout="@layout/fragment_savings" />
+
+    <fragment
+        android:id="@+id/nav_policies"
+        android:name="com.sri.eko.Views.fragments.PoliciesFragment"
+        android:label="@string/menu_policies"
+        tools:layout="@layout/fragment_policies" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.sri.eko.Views.fragments.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/uploadKycFragment"
+        android:name="com.sri.eko.Views.fragments.UploadKycFragment"
+        android:label="Verify KYC"
+        tools:layout="@layout/fragment_upload_kyc">
+        <action
+            android:id="@+id/action_uploadKycFragment_to_nav_home"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="com.sri.eko.Views.fragments.TermsConditionsFragment"
+        android:label="Terms &amp; Conditions"
+        tools:layout="@layout/fragment_terms_conditions" />
+    <fragment
+        android:id="@+id/trackLoansFragment"
+        android:name="com.sri.eko.Views.fragments.TrackLoansFragment"
+        android:label="Track Your Loans"
+        tools:layout="@layout/fragment_track_loans">
+        <action
+            android:id="@+id/action_trackLoansFragment_to_bankDetailsFragment"
+            app:destination="@id/bankDetailsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_trackLoansFragment_to_loanPaymentsFragment"
+            app:destination="@id/loanPaymentsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankDetailsFragment"
+        android:name="com.sri.eko.Views.fragments.BankDetailsFragment"
+        android:label="Bank Details"
+        tools:layout="@layout/fragment_bank_details">
+        <action
+            android:id="@+id/action_bankDetailsFragment_to_trackLoansFragment"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            app:popUpTo="@id/trackLoansFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanPaymentsFragment"
+        android:name="com.sri.eko.Views.fragments.LoanPaymentsFragment"
+        android:label="Loan Payment"
+        tools:layout="@layout/fragment_loan_payments" />
+
+</navigation>
